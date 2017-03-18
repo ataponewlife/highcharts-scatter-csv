@@ -19,7 +19,7 @@
   <script>
 
   $(function() {
-    $.get('data-scatter.csv', function(csv) {     Newlife highchart
+    $.get('data-scatter.csv', function(csv) {   //  Newlife highchart
       Highcharts.chart('container', {
         chart: {
           type: 'scatter',
@@ -27,7 +27,7 @@
         },
 
         title: {
-          text: 'Highcharts scatter chart from CSV'   Newlife Highchart scatter chart
+          text: 'Highcharts scatter chart from CSV'  // Newlife Highchart scatter chart
         },
 
         subtitle: {
@@ -52,13 +52,13 @@
 
         xAxis: {
           title: {
-            text: 'Insert x-axis label'   Household income
+            text: 'Insert x-axis label' //  Household income
           }
         },
 
         yAxis: {
           title: {
-            text: 'Insert y-axis label'    Average
+            text: 'Insert y-axis label'  //  Average
           }
         },
 
@@ -82,9 +82,9 @@
               point = this.point;
               // EDIT tooltip text labels below to match your data
               html = '<table>';
-              html += '<tr><th colspan="2"><h3>District: ' + point.name + '</h3></th></tr>';
-              html += '<tr><th>Median household income:</th><td>$' + comma(point.x) + '</td></tr>';
-              html += '<tr><th>Grades above/below average:</th><td>' + point.y + '</td></tr>';
+              html += '<tr><th colspan="2"><h3>My Region: ' + point.name + '</h3></th></tr>';
+              html += '<tr><th>Income for Household:</th><td>$' + comma(point.x) + '</td></tr>';
+              html += '<tr><th>Individual grades:</th><td>' + point.y + '</td></tr>';
               html += '</table>';
 
               return html;
